@@ -1,6 +1,6 @@
-# React Synthesizer
+# Polyphonic-TS-1
 
-The React Synthesizer is a web application that allows users to generate and visualize audio waveforms using the Web Audio API. It provides a user interface for adjusting the oscillator type, frequency, and other parameters, and displays the waveform in an oscilloscope visualizer.
+Polyphonic-TS-1 is a web application that allows users to generate and visualize audio waveforms using the Web Audio API. It provides a user interface for adjusting the oscillator type, frequency, and other parameters, and displays the waveform in an oscilloscope visualizer.
 
 ## Features
 
@@ -30,7 +30,7 @@ The React Synthesizer is a web application that allows users to generate and vis
 1. Clone the repository:
 
    ```bash
-    git clone https://github.com/michaelliriano/react-synthesizer.git
+    git clone https://github.com/michaelliriano/Polyphonic-TS-1.git
 
    ```
 
