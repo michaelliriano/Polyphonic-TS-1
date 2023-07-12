@@ -8,7 +8,7 @@ import { ColorContext } from "../../context/ColorContext";
 interface OscillatorSettingsProps {
   osc: CustomOsc;
   oscData: OscillatorNode;
-  types: SineWaveProps["type"][];
+  types: OscillatorType[];
   onChangeType: (type: SineWaveProps["type"]) => void;
   onToggleEnabled: () => void;
   onChangeDetune: (value: number) => void;

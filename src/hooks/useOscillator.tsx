@@ -28,12 +28,6 @@ export function useOscillators({
   const [currentFrequency, setCurrentFrequency] = useState<number | null>(null);
   const [oscillators, setOscillators] = useState<OscillatorNode[]>([]);
 
-  // Create a master gain node
-  const masterGain = audioContext?.createGain();
-  if (masterGain) {
-    masterGain.gain.value = .1;
-    masterGain.connect(audioContext?.destination);
-  }
 
   const { createOscillator } = useCreateOscillator(audioContext, filters);
 
@@ -73,9 +67,6 @@ export function useOscillators({
           1
         );
 
-        // Connect the oscillator to the master gain
-        oscillator.connect(masterGain);
-
         oscillator.start();
 
         newOscillators.push(oscillator);
@@ -92,7 +83,7 @@ export function useOscillators({
       setOscillatorCount(oscillatorCount + newOscillators.length);
       setOscillators(newOscillators);
     },
-    [createOscillator, customOsc, masterGain, oscillatorCount]
+    [createOscillator, customOsc, oscillatorCount]
   );
 
   /**

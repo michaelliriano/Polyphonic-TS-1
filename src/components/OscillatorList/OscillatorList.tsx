@@ -3,10 +3,9 @@ import { SineWaveProps } from "../SineWave/SineWave";
 import OscillatorSettings from "../OscillatorSettings/OscillatorSettings";
 import { OscillatorContext } from "../../context/OscillatorContext";
 import { CustomOscillatorContext } from "../../context/CustomOscillatorContext";
+import { OscillatorTypesContext } from "../../context/OscillatorTypesContext";
 
-type OscillatorType = "sine" | "sawtooth" | "square" | "triangle";
 interface OscillatorListProps {
-  types: OscillatorType[];
   onOscillatorTypeChange: (index: number, type: SineWaveProps["type"]) => void;
   onOscillatorToggleEnabled: (index: number) => void;
   onOscillatorDetuneChange: (index: number, value: number) => void;
@@ -18,7 +17,6 @@ interface OscillatorListProps {
 }
 
 const OscillatorList: React.FC<OscillatorListProps> = ({
-  types,
   onOscillatorTypeChange,
   onOscillatorVolumeChange,
   onOscillatorToggleEnabled,
@@ -30,6 +28,7 @@ const OscillatorList: React.FC<OscillatorListProps> = ({
 }) => {
   const oscillators = useContext(OscillatorContext);
   const customOsc = useContext(CustomOscillatorContext);
+  const types = useContext(OscillatorTypesContext);
 
   return (
     <section

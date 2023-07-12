@@ -6,7 +6,6 @@ interface PresetFormProps {
   onSavePreset: (preset: Preset) => void;
   onDeletePreset: (preset: Preset) => void; // New prop for deleting presets
   selectedPreset: Preset | null;
-  types: string[];
 }
 
 const PresetForm: React.FC<PresetFormProps> = ({
